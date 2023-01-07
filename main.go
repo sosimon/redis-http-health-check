@@ -120,6 +120,8 @@ func main() {
 	r.HandleFunc("/status", statusHandler)
 	r.HandleFunc("/lb_status", lbStatusHandler)
 
+	fmt.Println("Serving on port 8080...")
+
 	// Bind to a port and pass our router in
-	log.Fatal(http.ListenAndServe(":8000", r))
+	log.Fatal(http.ListenAndServe(":8080", r))
 }
